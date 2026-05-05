@@ -122,33 +122,33 @@ Right → histogram'''
 '''Create a plot and:
 ✔ Set custom x-ticks like: 0, 10, 20, 30
 ✔ Change labels (like "zero", "ten", etc.)'''
-# x=[0,10,20,30]
-# y=["marks","numbers","score","digit"]
-# plt.plot(x,y)
-# plt.xticks([0,10,20,30])
-# plt.xticks([0,10,20,30],["Zero","Ten","Twenty","Thirty"])
-# plt.xlabel("X-axis")
-# plt.ylabel("y-axis")
-# plt.title("Custom Ticking")
-# plt.show()
+x=[0,10,20,30]
+y = [10, 20, 30, 40] 
+plt.plot(x,y)
+plt.xticks([0,10,20,30])
+plt.xticks([0,10,20,30],["Zero","Ten","Twenty","Thirty"])
+plt.xlabel("X-axis")
+plt.ylabel("y-axis")
+plt.title("Custom Ticking")
+plt.show()
 
 # Question 10
 '''Dual Axis (twinx)
 Plot:
 Left axis → sine wave
 Right axis → linear data'''
-# x = [1, 2, 3, 4]
-# y = [10, 20, 30, 40]
-# b = np.sin(x)
-# fig, ax1 = plt.subplots()
-# ax1.plot(x, b, color='blue', label="Sine Wave")
-# ax1.set_xlabel("X-axis")
-# ax1.set_ylabel("Sine Wave", color='blue')
-# ax2 = ax1.twinx()
-# ax2.plot(x, y, color='red', label="Linear Data")
-# ax2.set_ylabel("Linear Data", color='red')
-# plt.title("Dual Axis Example")
-# plt.show()
+x = [1, 2, 3, 4]
+y = [10, 20, 30, 40]
+b = np.sin(x)
+fig, ax1 = plt.subplots()
+ax1.plot(x, b, color='blue', label="Sine Wave")
+ax1.set_xlabel("X-axis")
+ax1.set_ylabel("Sine Wave", color='blue')
+ax2 = ax1.twinx()
+ax2.plot(x, y, color='red', label="Linear Data")
+ax2.set_ylabel("Linear Data", color='red')
+plt.title("Dual Axis Example")
+plt.show()
 
 # Question 11
 '''Create scatter plot:
@@ -159,15 +159,18 @@ x=np.random.rand(50)
 y=np.random.rand(50)
 c=np.random.rand(50)
 plt.scatter(x,y,c=c)
+plt.scatter(x, y, c=c, cmap='viridis')
 plt.colorbar()
 plt.show()
+
 # Question 12
 '''Create plot where:
 ✔ y-axis is logarithmic'''
 x = [1,2,3,4,5]
 y = [10, 100, 1000, 10000, 100000]
 plt.plot(x,y)
-plt.ylabel("log")
+plt.yscale("log")
+plt.ylabel("Log scale")
 plt.show()
 
 # Question 13
@@ -180,12 +183,15 @@ Bar chart for marks
 Scatter plot: study_hours vs marks
 Add labels + title
 Highlight highest scorer'''
-# students = ['A','B','C','D','E']
-# marks = [70, 85, 90, 60, 75]
-# study_hours = [2,4,5,1,3]
-# plt.bar(marks,height=0.8)
-# plt.scatter(study_hours,marks,color="red",marker="*")
-# plt.xlabel("x-axis")
-# plt.ylabel("y-axis")
-# plt.title("Mini project")
-# plt.show()
+students = ['A','B','C','D','E']
+marks = [70, 85, 90, 60, 75]
+study_hours = [2,4,5,1,3]
+plt.bar(students,marks)
+plt.scatter(study_hours,marks,color="red",marker="*")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.title("Mini project")
+idx=np.argmax(marks)
+plt.scatter(study_hours[idx], marks[idx], color='red', s=100)
+plt.show()
+
