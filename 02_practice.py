@@ -61,10 +61,12 @@ Generate random data using NumPy and create scatter plot
 ✔ Add:
 color
 size variation'''
-# a=np.random.randint(1,8,(2,3))
-# b=np.random.randint(9,18,(2,3))
-# plt.figure(figsize=(10,3))
-# plt.plot(a,b,color="green")
+# a = np.random.randint(1, 50, 50)
+# b = np.random.randint(1, 50, 50)
+# plt.scatter(a, b, c='blue', s=50)
+# plt.xlabel("X-axis")
+# plt.ylabel("Y-axis")
+# plt.title("Scatter Plot")
 # plt.show()
 
 # Question 5
@@ -73,10 +75,10 @@ size variation'''
 bins
 color
 transparency'''
-random_no=np.random.randint(1,2000,(1000))
-plt.hist(random_no)
-plt.show()
-print(random_no)
+# random_no=np.random.randint(1,2000,(1000))
+# plt.hist(random_no,bins=30,color="brown",alpha=0.7)
+# plt.show()
+# print(random_no)
 
 # Question 6
 '''Create a bar chart:
@@ -85,10 +87,105 @@ marks = [75, 85, 60, 90]
 ✔ Add:
 title
 labels'''
-students = ['A','B','C','D']
-marks = [75, 85, 60, 90]
-plt.plot(students,marks)
-plt.xlabel("Students")
-plt.ylabel("Marks")
-plt.title("Bar chart")
+# students = ['A','B','C','D']
+# marks = [75, 85, 60, 90]
+# plt.bar(students,marks)
+# plt.xlabel("Students")
+# plt.ylabel("Marks")
+# plt.title("Bar chart")
+# plt.show()
+
+# Question 7
+'''Subplots
+Create 2 plots side by side:
+Left → line plot
+Right → histogram'''
+# a=plt.subplot(2,2,3)
+# b=plt.subplot(3,3,5)
+# plt.plot(a)
+# plt.hist(a)
+# plt.show()
+
+# Question 8
+'''Plot a sine wave and:
+✔ Mark maximum point using annotation'''
+# a=np.linspace(2,4*np.pi,100)
+# b=np.sin(a)
+# plt.plot(a,b)
+# idx=np.argmax(b)
+# x_max=a[idx]
+# y_max=b[idx]
+# plt.annotate("|",(x_max,y_max))
+# plt.show()
+
+# Question 9
+'''Create a plot and:
+✔ Set custom x-ticks like: 0, 10, 20, 30
+✔ Change labels (like "zero", "ten", etc.)'''
+# x=[0,10,20,30]
+# y=["marks","numbers","score","digit"]
+# plt.plot(x,y)
+# plt.xticks([0,10,20,30])
+# plt.xticks([0,10,20,30],["Zero","Ten","Twenty","Thirty"])
+# plt.xlabel("X-axis")
+# plt.ylabel("y-axis")
+# plt.title("Custom Ticking")
+# plt.show()
+
+# Question 10
+'''Dual Axis (twinx)
+Plot:
+Left axis → sine wave
+Right axis → linear data'''
+# x = [1, 2, 3, 4]
+# y = [10, 20, 30, 40]
+# b = np.sin(x)
+# fig, ax1 = plt.subplots()
+# ax1.plot(x, b, color='blue', label="Sine Wave")
+# ax1.set_xlabel("X-axis")
+# ax1.set_ylabel("Sine Wave", color='blue')
+# ax2 = ax1.twinx()
+# ax2.plot(x, y, color='red', label="Linear Data")
+# ax2.set_ylabel("Linear Data", color='red')
+# plt.title("Dual Axis Example")
+# plt.show()
+
+# Question 11
+'''Create scatter plot:
+✔ x, y random
+✔ color based on third variable
+# ✔ Add colorbar'''
+x=np.random.rand(50)
+y=np.random.rand(50)
+c=np.random.rand(50)
+plt.scatter(x,y,c=c)
+plt.colorbar()
 plt.show()
+# Question 12
+'''Create plot where:
+✔ y-axis is logarithmic'''
+x = [1,2,3,4,5]
+y = [10, 100, 1000, 10000, 100000]
+plt.plot(x,y)
+plt.ylabel("log")
+plt.show()
+
+# Question 13
+'''Create dataset:
+students = ['A','B','C','D','E']
+marks = [70, 85, 90, 60, 75]
+study_hours = [2,4,5,1,3]
+✔ Tasks:
+Bar chart for marks
+Scatter plot: study_hours vs marks
+Add labels + title
+Highlight highest scorer'''
+# students = ['A','B','C','D','E']
+# marks = [70, 85, 90, 60, 75]
+# study_hours = [2,4,5,1,3]
+# plt.bar(marks,height=0.8)
+# plt.scatter(study_hours,marks,color="red",marker="*")
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
+# plt.title("Mini project")
+# plt.show()
