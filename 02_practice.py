@@ -33,10 +33,24 @@ x = [1,2,3,4]
 y1 = [1,4,9,16]
 y2 = [1,2,3,4]
 y3 = [2,3,5,7]
-plt.plot(x,y1)
-plt.plot(x,y2)
-plt.plot(x,y3)
+plt.plot(x,y1,label="data1")
+plt.plot(x,y2,label="data2")
+plt.plot(x,y3,label="data3")
 plt.xlabel("x-axis")
 plt.ylabel("y-axis")
 plt.title("Second graph")
+plt.legend()
+plt.show()
+
+# Question 3
+'''Marker + Style
+Plot a line with:
+markers
+dashed line
+custom color'''
+x = [1,2,3,4]
+y1 = [1,4,9,16]
+y2 = [1,2,3,4]
+y3 = [2,3,5,7]
+plt.plot(x,y1, marker="^",linestyle="--")
 plt.show()
