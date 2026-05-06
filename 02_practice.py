@@ -226,14 +226,14 @@ figure background color
 figure title
 axes title
 custom figure size'''
-fig=plt.figure(figsize=(2,4),
-                  layout="constrained",
-                  facecolor="yellow")
-fig.suptitle("Sachin",fontsize=20)
-ax=fig.add_subplot()
-ax.set_title("Figure")
-plt.plot([2,3,4],[5,6,7])
-plt.show()
+# fig=plt.figure(figsize=(2,4),
+#                   layout="constrained",
+#                   facecolor="yellow")
+# fig.suptitle("Sachin",fontsize=20)
+# ax=fig.add_subplot()
+# ax.set_title("Figure")
+# plt.plot([2,3,4],[5,6,7])
+# plt.show()
 
 # Question 16
 '''Create:
@@ -242,6 +242,44 @@ Requirements:
 each subplot must have different title
 different background colors
 different line plots'''
-fig=plt.figure(figsize=(3,5),
-               layout="constrained",
-               facecolor="pink")
+plt.subplot(2,2,1,facecolor="pink")
+plt.title("Fig-1")
+plt.plot([3,4,5],[6,7,8])
+
+plt.subplot(2,2,2,facecolor="yellow" )
+plt.title("Fig-2")
+plt.plot([10,12,14],[6,7,8])
+
+plt.subplot(2,2,3,facecolor="brown" )
+plt.title("Fig-3")
+plt.plot([6,7,9],[9,7,3])
+
+plt.subplot(2,2,4,facecolor="gold" )
+plt.title("Fig-4")
+plt.plot([11,13,15],[9,7,3])
+
+plt.show()
+
+# Question 17
+'''Create a figure with:
+4 subplots
+Add:
+figure-wide x-label
+figure-wide y-label
+figure-wide title'''
+plt.subplot(2,5,1)
+plt.plot(figsize=(2,4))
+plt.title("Fig 1")
+plt.subplot(6,7,2)
+plt.plot(figsize=(2,4))
+plt.title("Fig 2")
+
+plt.subplot(8,9,3)
+plt.plot(figsize=(2,4))
+plt.title("Fig 3")
+
+plt.subplot(12,18,4)
+plt.plot(figsize=(2,4))
+plt.title("Fig 4")
+
+plt.show()
