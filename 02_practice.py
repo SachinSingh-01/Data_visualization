@@ -204,14 +204,44 @@ figure with yellow background
 2 subplots
 figure title
 different axes titles'''
-fig=plt.figure(facecolor="yellow")
-plt.subplot(1,2,1)
-plt.title("Left plot")
-plt.plot([1,3,4],[6,7,5])
+# fig=plt.figure(facecolor="yellow")
+# plt.subplot(1,2,1)  # here 1 for rows, 2 for column, 1 for position (leftmost)
+# plt.title("Left plot")
+# plt.plot([1,3,4],[6,7,5])
 
-plt.subplot(1,2,2)
-plt.title("Right plot")
-plt.plot([7,8,9],[9,10,11])
+# plt.subplot(1,2,2) # here 1 for rows, 2 for column, 2 for position (rightmost)
+# plt.title("Right plot")
+# plt.plot([7,8,9],[9,10,11])
 
-plt.suptitle("axes")
+# plt.suptitle("axes")
+# plt.show()
+
+# Question 15
+'''Understand Figure vs Axes
+Create:
+one Figure
+one Axes
+Requirements:
+figure background color
+figure title
+axes title
+custom figure size'''
+fig=plt.figure(figsize=(2,4),
+                  layout="constrained",
+                  facecolor="yellow")
+fig.suptitle("Sachin",fontsize=20)
+ax=fig.add_subplot()
+ax.set_title("Figure")
+plt.plot([2,3,4],[5,6,7])
 plt.show()
+
+# Question 16
+'''Create:
+2 rows x 2 columns
+Requirements:
+each subplot must have different title
+different background colors
+different line plots'''
+fig=plt.figure(figsize=(3,5),
+               layout="constrained",
+               facecolor="pink")
