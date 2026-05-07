@@ -298,38 +298,57 @@ First:
 ❌ without constrained layout
 Then:
 ✅ with constrained layout'''
-
+plt.figure(figsize=(8,6))
 plt.xlabel("This is a very long x-axis label")
 plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example")
+plt.title("This is a very long subplot title example-1")
 
-# plt.xlabel("x-axis")
-# plt.ylabel("y-axis")
 plt.subplot(2,2,1)
 plt.plot([4,5,6],[7,8,9])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-2")
 
 plt.subplot(2,2,2)
 plt.plot([8,6,9],[3,7,4])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-3")
 
 plt.subplot(2,2,3)
 plt.plot([8,3,7],[9,3,5])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-4")
 
 plt.subplot(2,2,4)
 plt.plot([7,3,2],[8,1,2])
 plt.show()
 
-plt.figure(constrained_layout=True)
+plt.figure(figsize=(8,6),constrained_layout=True)
 plt.subplot(2,2,1)
 plt.plot([4,5,6],[7,8,9])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-4")
 
 plt.subplot(2,2,2)
 plt.plot([8,6,9],[3,7,4])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-4")
 
 plt.subplot(2,2,3)
 plt.plot([8,3,7],[9,3,5])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-4")
 
 plt.subplot(2,2,4)
 plt.plot([7,3,2],[8,1,2])
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example-4")
 
 
 plt.show()
