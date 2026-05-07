@@ -242,23 +242,23 @@ Requirements:
 each subplot must have different title
 different background colors
 different line plots'''
-plt.subplot(2,2,1,facecolor="pink")
-plt.title("Fig-1")
-plt.plot([3,4,5],[6,7,8])
+# plt.subplot(2,2,1,facecolor="pink")
+# plt.title("Fig-1")
+# plt.plot([3,4,5],[6,7,8])
 
-plt.subplot(2,2,2,facecolor="yellow" )
-plt.title("Fig-2")
-plt.plot([10,12,14],[6,7,8])
+# plt.subplot(2,2,2,facecolor="yellow" )
+# plt.title("Fig-2")
+# plt.plot([10,12,14],[6,7,8])
 
-plt.subplot(2,2,3,facecolor="brown" )
-plt.title("Fig-3")
-plt.plot([6,7,9],[9,7,3])
+# plt.subplot(2,2,3,facecolor="brown" )
+# plt.title("Fig-3")
+# plt.plot([6,7,9],[9,7,3])
 
-plt.subplot(2,2,4,facecolor="gold" )
-plt.title("Fig-4")
-plt.plot([11,13,15],[9,7,3])
+# plt.subplot(2,2,4,facecolor="gold" )
+# plt.title("Fig-4")
+# plt.plot([11,13,15],[9,7,3])
 
-plt.show()
+# plt.show()
 
 # Question 17
 '''Create a figure with:
@@ -267,19 +267,69 @@ Add:
 figure-wide x-label
 figure-wide y-label
 figure-wide title'''
-plt.subplot(2,5,1)
-plt.plot(figsize=(2,4))
-plt.title("Fig 1")
-plt.subplot(6,7,2)
-plt.plot(figsize=(2,4))
-plt.title("Fig 2")
+# fig=plt.figure(figsize=(8,6))
+# plt.subplot(2,2,1)
+# plt.plot([1,2,3],[4,5,6])
+# plt.title("Fig-1")
 
-plt.subplot(8,9,3)
-plt.plot(figsize=(2,4))
-plt.title("Fig 3")
+# plt.subplot(2,2,2)
+# plt.plot([7,4,6],[8,4,3])
+# plt.title("Fig-2")
 
-plt.subplot(12,18,4)
-plt.plot(figsize=(2,4))
-plt.title("Fig 4")
+# plt.subplot(2,2,3)
+# plt.plot([4,2,6],[9,8,5])
+# plt.title("Fig-3")
+
+# plt.subplot(2,2,4)
+# plt.plot([4,2,3],[8,1,3])
+# plt.title("Fig-4")
+
+# fig.text(0.5, 0.04, "X-axis", ha='center')
+# fig.text(0.04, 0.5, "Y-axis", va='center', rotation='vertical')
+# plt.tight_layout()
+# plt.show()
+
+# Question 18
+'''Create:
+4 crowded subplots
+long titles
+long labels
+First:
+❌ without constrained layout
+Then:
+✅ with constrained layout'''
+
+plt.xlabel("This is a very long x-axis label")
+plt.ylabel("This is a very long y-axis label")
+plt.title("This is a very long subplot title example")
+
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
+plt.subplot(2,2,1)
+plt.plot([4,5,6],[7,8,9])
+
+plt.subplot(2,2,2)
+plt.plot([8,6,9],[3,7,4])
+
+plt.subplot(2,2,3)
+plt.plot([8,3,7],[9,3,5])
+
+plt.subplot(2,2,4)
+plt.plot([7,3,2],[8,1,2])
+plt.show()
+
+plt.figure(constrained_layout=True)
+plt.subplot(2,2,1)
+plt.plot([4,5,6],[7,8,9])
+
+plt.subplot(2,2,2)
+plt.plot([8,6,9],[3,7,4])
+
+plt.subplot(2,2,3)
+plt.plot([8,3,7],[9,3,5])
+
+plt.subplot(2,2,4)
+plt.plot([7,3,2],[8,1,2])
+
 
 plt.show()
