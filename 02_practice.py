@@ -361,7 +361,101 @@ Analyze:
 spacing
 alignment
 readability'''
-plt.figure(figsize=(8,6),layout="tight")
+# plt.figure(figsize=(8,6),layout="tight")
+# plt.subplot(2,2,1)
+# plt.plot([4,5,6],[7,8,9])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-1")
+
+
+# plt.subplot(2,2,2)
+# plt.plot([8,6,9],[3,7,4])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-2")
+
+# plt.subplot(2,2,3)
+# plt.plot([8,3,7],[9,3,5])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-3")
+
+# plt.subplot(2,2,4)
+# plt.plot([7,3,2],[8,1,2])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-4")
+
+# plt.show()
+
+
+# plt.figure(figsize=(8,6),layout="compressed")
+# plt.subplot(2,2,1)
+# plt.plot([4,5,6],[7,8,9])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-1")
+
+
+# plt.subplot(2,2,2)
+# plt.plot([8,6,9],[3,7,4])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-2")
+
+# plt.subplot(2,2,3)
+# plt.plot([8,3,7],[9,3,5])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-3")
+
+# plt.subplot(2,2,4)
+# plt.plot([7,3,2],[8,1,2])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-4")
+
+# plt.show()
+
+# plt.figure(figsize=(8,6),layout="constrained")
+# plt.subplot(2,2,1)
+# plt.plot([4,5,6],[7,8,9])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-1")
+
+
+# plt.subplot(2,2,2)
+# plt.plot([8,6,9],[3,7,4])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-2")
+
+# plt.subplot(2,2,3)
+# plt.plot([8,3,7],[9,3,5])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-3")
+
+# plt.subplot(2,2,4)
+# plt.plot([7,3,2],[8,1,2])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-4")
+
+# plt.show()
+
+# Question 20
+'''Save same figure with:
+dpi=50
+dpi=100
+dpi=300
+Compare:
+quality
+sharpness
+file size'''
+plt.figure(figsize=(8,6))
 plt.subplot(2,2,1)
 plt.plot([4,5,6],[7,8,9])
 plt.xlabel("This is a very long x-axis label")
@@ -386,11 +480,12 @@ plt.plot([7,3,2],[8,1,2])
 plt.xlabel("This is a very long x-axis label")
 plt.ylabel("This is a very long y-axis label")
 plt.title("This is a very long subplot title example-4")
+plt.savefig("figdpi-50.png",dpi=50)
 
 plt.show()
 
 
-plt.figure(figsize=(8,6),layout="compressed")
+plt.figure(figsize=(8,6))
 plt.subplot(2,2,1)
 plt.plot([4,5,6],[7,8,9])
 plt.xlabel("This is a very long x-axis label")
@@ -415,10 +510,11 @@ plt.plot([7,3,2],[8,1,2])
 plt.xlabel("This is a very long x-axis label")
 plt.ylabel("This is a very long y-axis label")
 plt.title("This is a very long subplot title example-4")
+plt.savefig("figdpi-100.png",dpi=100)
 
 plt.show()
 
-plt.figure(figsize=(8,6),layout="constrained")
+plt.figure(figsize=(8,6))
 plt.subplot(2,2,1)
 plt.plot([4,5,6],[7,8,9])
 plt.xlabel("This is a very long x-axis label")
@@ -443,6 +539,7 @@ plt.plot([7,3,2],[8,1,2])
 plt.xlabel("This is a very long x-axis label")
 plt.ylabel("This is a very long y-axis label")
 plt.title("This is a very long subplot title example-4")
+plt.savefig("figdpi-300.png",dpi=300)
 
 plt.show()
 
