@@ -552,24 +552,51 @@ Requirements:
 figure title
 custom colors
 Hint:use:subplot_mosaic()'''
-fig,ax=plt.subplot_mosaic(
-    [
-        ["top","top"],
-        ["left","right"]
-    ],
-    figsize=(8,6)
-)
-ax["top"].plot([3,4,7,2],[2,6,8,6],color="blue")
-ax["top"].set_title("Top plot")
-ax["top"].set_facecolor("yellow")
+# fig,ax=plt.subplot_mosaic(
+#     [
+#         ["top","top"],
+#         ["left","right"]
+#     ],
+#     figsize=(8,6)
+# )
+# ax["top"].plot([3,4,7,2],[2,6,8,6],color="blue")
+# ax["top"].set_title("Top plot")
+# ax["top"].set_facecolor("yellow")
 
-ax["left"].plot([9,7,4,3],[4,8,9,3],color="red")
-ax["left"].set_title("left plot")
-ax["left"].set_facecolor("green")
+# ax["left"].plot([9,7,4,3],[4,8,9,3],color="red")
+# ax["left"].set_title("left plot")
+# ax["left"].set_facecolor("green")
 
-ax["right"].plot([2,5,7,8],[9,6,3,5],color="brown")
-ax["right"].set_title("right plot")
-ax["right"].set_facecolor("purple")
-plt.suptitle("Dashboard style figure",fontsize=20)
-plt.tight_layout()
+# ax["right"].plot([2,5,7,8],[9,6,3,5],color="brown")
+# ax["right"].set_title("right plot")
+# ax["right"].set_facecolor("purple")
+# plt.suptitle("Dashboard style figure",fontsize=20)
+# plt.tight_layout()
+# plt.show()
+
+# Question 22
+'''Create:
+one main figure
+left subfigure
+right subfigure
+Requirements:
+left subfigure → 2 vertical plots
+right subfigure → 2 horizontal plots
+different subfigure colors'''
+fig = plt.figure(layout='constrained', facecolor='lightskyblue')
+
+figL,figR=fig.subfigures(1,2)
+axL=figL.subplots(2,1)
+axL[0].plot([6,7,2],[8,9,2])
+axL[0].set_title("Left plot")
+axL[1].plot([6,7,2],[8,9,2])
+axL[1].set_title("Left plot")
+figL.set_facecolor("green")
+
+axR=figR.subplots(1,2)
+axR[0].plot([4,7,9],[2,7,5])
+axR[0].set_title("Right plot")
+axR[1].plot([4,7,9],[2,7,5])
+axR[1].set_title("Right plot")
+figR.set_facecolor("pink")
 plt.show()
