@@ -455,91 +455,121 @@ Compare:
 quality
 sharpness
 file size'''
-plt.figure(figsize=(8,6))
-plt.subplot(2,2,1)
-plt.plot([4,5,6],[7,8,9])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-1")
+# plt.figure(figsize=(8,6))
+# plt.subplot(2,2,1)
+# plt.plot([4,5,6],[7,8,9])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-1")
 
 
-plt.subplot(2,2,2)
-plt.plot([8,6,9],[3,7,4])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-2")
+# plt.subplot(2,2,2)
+# plt.plot([8,6,9],[3,7,4])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-2")
 
-plt.subplot(2,2,3)
-plt.plot([8,3,7],[9,3,5])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-3")
+# plt.subplot(2,2,3)
+# plt.plot([8,3,7],[9,3,5])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-3")
 
-plt.subplot(2,2,4)
-plt.plot([7,3,2],[8,1,2])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-4")
-plt.savefig("figdpi-50.png",dpi=50)
+# plt.subplot(2,2,4)
+# plt.plot([7,3,2],[8,1,2])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-4")
+# plt.savefig("figdpi-50.png",dpi=50)
 
+# plt.show()
+
+
+# plt.figure(figsize=(8,6))
+# plt.subplot(2,2,1)
+# plt.plot([4,5,6],[7,8,9])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-1")
+
+
+# plt.subplot(2,2,2)
+# plt.plot([8,6,9],[3,7,4])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-2")
+
+# plt.subplot(2,2,3)
+# plt.plot([8,3,7],[9,3,5])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-3")
+
+# plt.subplot(2,2,4)
+# plt.plot([7,3,2],[8,1,2])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-4")
+# plt.savefig("figdpi-100.png",dpi=100)
+
+# plt.show()
+
+# plt.figure(figsize=(8,6))
+# plt.subplot(2,2,1)
+# plt.plot([4,5,6],[7,8,9])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-1")
+
+
+# plt.subplot(2,2,2)
+# plt.plot([8,6,9],[3,7,4])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-2")
+
+# plt.subplot(2,2,3)
+# plt.plot([8,3,7],[9,3,5])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-3")
+
+# plt.subplot(2,2,4)
+# plt.plot([7,3,2],[8,1,2])
+# plt.xlabel("This is a very long x-axis label")
+# plt.ylabel("This is a very long y-axis label")
+# plt.title("This is a very long subplot title example-4")
+# plt.savefig("figdpi-300.png",dpi=300)
+
+# plt.show()
+
+# Question 21
+'''Create:
+dashboard-style figure
+Requirements:
+1 large plot on top
+2 small plots below
+figure title
+custom colors
+Hint:use:subplot_mosaic()'''
+fig,ax=plt.subplot_mosaic(
+    [
+        ["top","top"],
+        ["left","right"]
+    ],
+    figsize=(8,6)
+)
+ax["top"].plot([3,4,7,2],[2,6,8,6],color="blue")
+ax["top"].set_title("Top plot")
+ax["top"].set_facecolor("yellow")
+
+ax["left"].plot([9,7,4,3],[4,8,9,3],color="red")
+ax["left"].set_title("left plot")
+ax["left"].set_facecolor("green")
+
+ax["right"].plot([2,5,7,8],[9,6,3,5],color="brown")
+ax["right"].set_title("right plot")
+ax["right"].set_facecolor("purple")
+plt.suptitle("Dashboard style figure",fontsize=20)
+plt.tight_layout()
 plt.show()
-
-
-plt.figure(figsize=(8,6))
-plt.subplot(2,2,1)
-plt.plot([4,5,6],[7,8,9])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-1")
-
-
-plt.subplot(2,2,2)
-plt.plot([8,6,9],[3,7,4])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-2")
-
-plt.subplot(2,2,3)
-plt.plot([8,3,7],[9,3,5])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-3")
-
-plt.subplot(2,2,4)
-plt.plot([7,3,2],[8,1,2])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-4")
-plt.savefig("figdpi-100.png",dpi=100)
-
-plt.show()
-
-plt.figure(figsize=(8,6))
-plt.subplot(2,2,1)
-plt.plot([4,5,6],[7,8,9])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-1")
-
-
-plt.subplot(2,2,2)
-plt.plot([8,6,9],[3,7,4])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-2")
-
-plt.subplot(2,2,3)
-plt.plot([8,3,7],[9,3,5])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-3")
-
-plt.subplot(2,2,4)
-plt.plot([7,3,2],[8,1,2])
-plt.xlabel("This is a very long x-axis label")
-plt.ylabel("This is a very long y-axis label")
-plt.title("This is a very long subplot title example-4")
-plt.savefig("figdpi-300.png",dpi=300)
-
-plt.show()
-
