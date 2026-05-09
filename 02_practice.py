@@ -644,7 +644,6 @@ axL[0].set_title("Left plot")
 axL[1].plot([6,7,2],[8,9,2])
 axL[1].set_title("Left plot")
 figL.set_facecolor("green")
-# axL.bbox_inches="tight"
 
 axR=figR.subplots(1,2)
 axR[0].plot([4,7,9],[2,7,5])
@@ -652,8 +651,6 @@ axR[0].set_title("Right plot")
 axR[1].plot([4,7,9],[2,7,5])
 axR[1].set_title("Right plot")
 figR.set_facecolor("pink")
-plt.bbox_inches="tight"
-plt.savefig("Myfig.png")
-plt.savefig("Myfig.pdf")
-plt.savefig("Myfig.svg")
+plt.savefig("normal.png")
+plt.savefig("right.png",bbox_inches="tight")
 plt.show()
