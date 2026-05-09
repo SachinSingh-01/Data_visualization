@@ -610,6 +610,31 @@ Compare:
 zoom quality
 file size
 sharpness'''
+# fig = plt.figure(layout='constrained', facecolor='lightskyblue')
+
+# figL,figR=fig.subfigures(1,2)
+# axL=figL.subplots(2,1)
+# axL[0].plot([6,7,2],[8,9,2])
+# axL[0].set_title("Left plot")
+# axL[1].plot([6,7,2],[8,9,2])
+# axL[1].set_title("Left plot")
+# figL.set_facecolor("green")
+
+# axR=figR.subplots(1,2)
+# axR[0].plot([4,7,9],[2,7,5])
+# axR[0].set_title("Right plot")
+# axR[1].plot([4,7,9],[2,7,5])
+# axR[1].set_title("Right plot")
+# figR.set_facecolor("pink")
+# plt.savefig("Myfig.png")
+# plt.savefig("Myfig.pdf")
+# plt.savefig("Myfig.svg")
+# plt.show()
+
+# Question 24
+'''Save same figure:
+normal
+bbox_inches='tight'''
 fig = plt.figure(layout='constrained', facecolor='lightskyblue')
 
 figL,figR=fig.subfigures(1,2)
@@ -619,6 +644,7 @@ axL[0].set_title("Left plot")
 axL[1].plot([6,7,2],[8,9,2])
 axL[1].set_title("Left plot")
 figL.set_facecolor("green")
+# axL.bbox_inches="tight"
 
 axR=figR.subplots(1,2)
 axR[0].plot([4,7,9],[2,7,5])
@@ -626,6 +652,7 @@ axR[0].set_title("Right plot")
 axR[1].plot([4,7,9],[2,7,5])
 axR[1].set_title("Right plot")
 figR.set_facecolor("pink")
+plt.bbox_inches="tight"
 plt.savefig("Myfig.png")
 plt.savefig("Myfig.pdf")
 plt.savefig("Myfig.svg")
