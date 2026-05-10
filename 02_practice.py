@@ -635,22 +635,54 @@ sharpness'''
 '''Save same figure:
 normal
 bbox_inches='tight'''
-fig = plt.figure(layout='constrained', facecolor='lightskyblue')
+# fig = plt.figure(layout='constrained', facecolor='lightskyblue')
 
-figL,figR=fig.subfigures(1,2)
-axL=figL.subplots(2,1)
-axL[0].plot([6,7,2],[8,9,2])
-axL[0].set_title("Left plot")
-axL[1].plot([6,7,2],[8,9,2])
-axL[1].set_title("Left plot")
-figL.set_facecolor("green")
+# figL,figR=fig.subfigures(1,2)
+# axL=figL.subplots(2,1)
+# axL[0].plot([6,7,2],[8,9,2])
+# axL[0].set_title("Left plot")
+# axL[1].plot([6,7,2],[8,9,2])
+# axL[1].set_title("Left plot")
+# figL.set_facecolor("green")
 
-axR=figR.subplots(1,2)
-axR[0].plot([4,7,9],[2,7,5])
-axR[0].set_title("Right plot")
-axR[1].plot([4,7,9],[2,7,5])
-axR[1].set_title("Right plot")
-figR.set_facecolor("pink")
-plt.savefig("normal.png")
-plt.savefig("right.png",bbox_inches="tight")
+# axR=figR.subplots(1,2)
+# axR[0].plot([4,7,9],[2,7,5])
+# axR[0].set_title("Right plot")
+# axR[1].plot([4,7,9],[2,7,5])
+# axR[1].set_title("Right plot")
+# figR.set_facecolor("pink")
+# plt.savefig("normal.png")
+# plt.savefig("right.png",bbox_inches="tight")
+# plt.show()
+
+# Question 25
+'''Create ONE figure containing:
+line plot
+histogram
+scatter plot
+bar chart'''
+plt.figure(figsize=(8,6))
+plt.subplot(2,2,1)
+data=[3,4,7,8,9]
+plt.plot(data)
+plt.title("Line plot")
+
+plt.subplot(2,2,2)
+data1=[8,9,4,7,3]
+plt.hist(data1)
+plt.title("Histogram plot")
+
+plt.subplot(2,2,3)
+x=[9,7,4,8,9]
+y=data1
+plt.scatter(x,y)
+plt.title("Scatter plot")
+
+plt.subplot(2,2,4)
+x=[7,8,5,3,9]
+y=data
+plt.bar(x,y)
+plt.title("Bar plot")
+
+plt.tight_layout()
 plt.show()
