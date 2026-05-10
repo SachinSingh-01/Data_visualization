@@ -661,28 +661,68 @@ line plot
 histogram
 scatter plot
 bar chart'''
-plt.figure(figsize=(8,6))
-plt.subplot(2,2,1)
-data=[3,4,7,8,9]
-plt.plot(data)
-plt.title("Line plot")
+# plt.figure(figsize=(8,6))
+# plt.subplot(2,2,1)
+# data=[3,4,7,8,9]
+# plt.plot(data)
+# plt.title("Line plot")
 
-plt.subplot(2,2,2)
-data1=[8,9,4,7,3]
-plt.hist(data1)
-plt.title("Histogram plot")
+# plt.subplot(2,2,2)
+# data1=[8,9,4,7,3]
+# plt.hist(data1)
+# plt.title("Histogram plot")
 
-plt.subplot(2,2,3)
-x=[9,7,4,8,9]
-y=data1
-plt.scatter(x,y)
-plt.title("Scatter plot")
+# plt.subplot(2,2,3)
+# x=[9,7,4,8,9]
+# y=data1
+# plt.scatter(x,y)
+# plt.title("Scatter plot")
 
-plt.subplot(2,2,4)
-x=[7,8,5,3,9]
-y=data
-plt.bar(x,y)
-plt.title("Bar plot")
+# plt.subplot(2,2,4)
+# x=[7,8,5,3,9]
+# y=data
+# plt.bar(x,y)
+# plt.title("Bar plot")
+
+# plt.tight_layout()
+# plt.show()
+
+# Question 26
+'''Recreate a Real Dashboard
+Search inspiration from:
+finance dashboards
+ML dashboards
+analytics reports
+Try recreating layout using:
+subplot_mosaic
+subfigures
+custom figsize
+constrained layout'''
+fig,ax=plt.subplot_mosaic(
+    [
+    ["top", "top"],
+    ["left", "right"],
+    ["bottom", "bottom"]
+],
+    figsize=(8,6),
+    layout="constrained"
+)
+ax["top"].plot([5,7,8,9,6])
+ax["top"].set_title("Line plot")
+
+x=[7,8,6,5]
+y=[7,9,2,4]
+ax["left"].scatter(x,y)
+ax["left"].set_title("scatter plot")
+
+a=[7,9,2,7,5]
+ax["right"].hist(a)
+ax["right"].set_title("Histogram Plot")
+
+s=[8,9,5,3,2]
+k=[6,4,3,9,0]
+ax["bottom"].bar(s,k)
+ax["bottom"].set_title("Bar plot")
 
 plt.tight_layout()
 plt.show()
