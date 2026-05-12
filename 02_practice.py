@@ -698,31 +698,57 @@ subplot_mosaic
 subfigures
 custom figsize
 constrained layout'''
-fig,ax=plt.subplot_mosaic(
-    [
-    ["top", "top"],
-    ["left", "right"],
-    ["bottom", "bottom"]
-],
-    figsize=(8,6),
-    layout="constrained"
-)
-ax["top"].plot([5,7,8,9,6])
-ax["top"].set_title("Line plot")
+# fig,ax=plt.subplot_mosaic(
+#     [
+#     ["top", "top"],
+#     ["left", "right"],
+#     ["bottom", "bottom"]
+# ],
+#     figsize=(8,6),
+#     layout="constrained"
+# )
+# ax["top"].plot([5,7,8,9,6])
+# ax["top"].set_title("Line plot")
 
-x=[7,8,6,5]
-y=[7,9,2,4]
-ax["left"].scatter(x,y)
-ax["left"].set_title("scatter plot")
+# x=[7,8,6,5]
+# y=[7,9,2,4]
+# ax["left"].scatter(x,y)
+# ax["left"].set_title("scatter plot")
 
-a=[7,9,2,7,5]
-ax["right"].hist(a)
-ax["right"].set_title("Histogram Plot")
+# a=[7,9,2,7,5]
+# ax["right"].hist(a)
+# ax["right"].set_title("Histogram Plot")
 
-s=[8,9,5,3,2]
-k=[6,4,3,9,0]
-ax["bottom"].bar(s,k)
-ax["bottom"].set_title("Bar plot")
+# s=[8,9,5,3,2]
+# k=[6,4,3,9,0]
+# ax["bottom"].bar(s,k)
+# ax["bottom"].set_title("Bar plot")
 
-plt.tight_layout()
+# plt.tight_layout()
+# plt.show()
+
+# Question 27
+'''Create SAME graph using:
+pyplot interface
+explicit axes interface
+Then compare:
+readability
+flexibility
+scalability'''
+
+# Using pyplot interface
+plt.figure(figsize=(8,2))
+plt.subplot(1,2,1)
+plt.plot([5,7,8],[3,2,1])
+plt.title("Pyplot interface 1")
+plt.subplot(1,2,2)
+plt.plot([3,2,7],[2,9,6])
+plt.title("Pyplot interface 2")
+
+# Using explicit  interface
+fig,ax=plt.subplots(1,2)
+ax[0].plot([5,7,8],[3,2,1])
+ax[0].set_title("Explicit interface 1")
+ax[1].plot([3,2,7],[2,9,6])
+ax[1].set_title("Explicit interface 2")
 plt.show()
