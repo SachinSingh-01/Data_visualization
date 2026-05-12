@@ -761,21 +761,44 @@ Do:
 using subplot() recall
 using explicit axes
 Observe difference.'''
-plt.figure(figsize=(8,2))
-plt.subplot(1,2,1)
-plt.plot([4,9,3],[5,3,2])
-plt.title("Figure 1")
+# plt.figure(figsize=(8,2))
+# plt.subplot(1,2,1)
+# plt.plot([4,9,3],[5,3,2])
+# plt.title("Figure 1")
 
+# plt.subplot(1,2,2)
+# plt.plot([8,3,1],[9,5,4])
+# plt.title("Figure 2")
+
+# plt.subplot(1,2,1)
+# plt.title("Modified")
+
+# fig,ax=plt.subplots(1,2)
+# ax[0].plot([4,9,3],[5,3,2])
+# ax[1].plot([8,3,1],[9,5,4])
+
+# ax[0].set_title("Modified")
+# plt.show()
+
+# Question 29
+'''Use:
+plt.gca()
+plt.gcf()
+Print:
+current axes
+current figure
+after different plotting operations.
+Goal
+Understand pyplot state machine deeply.'''
+plt.figure(figsize=(8,9))
+plt.subplot(1,2,1)
+plt.plot([56,45,34],[34,56,78])
+plt.title("Get currect figure/ Get current axis -1")
+print(plt.gca())
+print(plt.gcf())
 plt.subplot(1,2,2)
-plt.plot([8,3,1],[9,5,4])
-plt.title("Figure 2")
-
-plt.subplot(1,2,1)
-plt.title("Modified")
-
-fig,ax=plt.subplots(1,2)
-ax[0].plot([4,9,3],[5,3,2])
-ax[1].plot([8,3,1],[9,5,4])
-
-ax[0].set_title("Modified")
+plt.plot([67,87,54],[78,98,88])
+plt.title("Get currect figure/ Get current axis -2")
+print(plt.gca())
+print(plt.gcf())
 plt.show()
