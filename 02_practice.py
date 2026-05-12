@@ -737,18 +737,45 @@ flexibility
 scalability'''
 
 # Using pyplot interface
+# plt.figure(figsize=(8,2))
+# plt.subplot(1,2,1)
+# plt.plot([5,7,8],[3,2,1])
+# plt.title("Pyplot interface 1")
+# plt.subplot(1,2,2)
+# plt.plot([3,2,7],[2,9,6])
+# plt.title("Pyplot interface 2")
+
+# # Using explicit  interface
+# fig,ax=plt.subplots(1,2)
+# ax[0].plot([5,7,8],[3,2,1])
+# ax[0].set_title("Explicit interface 1")
+# ax[1].plot([3,2,7],[2,9,6])
+# ax[1].set_title("Explicit interface 2")
+# plt.show()
+
+# Question 28
+'''Create:
+2 subplots using pyplot
+modify first subplot after creating second subplot
+Do:
+using subplot() recall
+using explicit axes
+Observe difference.'''
 plt.figure(figsize=(8,2))
 plt.subplot(1,2,1)
-plt.plot([5,7,8],[3,2,1])
-plt.title("Pyplot interface 1")
-plt.subplot(1,2,2)
-plt.plot([3,2,7],[2,9,6])
-plt.title("Pyplot interface 2")
+plt.plot([4,9,3],[5,3,2])
+plt.title("Figure 1")
 
-# Using explicit  interface
+plt.subplot(1,2,2)
+plt.plot([8,3,1],[9,5,4])
+plt.title("Figure 2")
+
+plt.subplot(1,2,1)
+plt.title("Modified")
+
 fig,ax=plt.subplots(1,2)
-ax[0].plot([5,7,8],[3,2,1])
-ax[0].set_title("Explicit interface 1")
-ax[1].plot([3,2,7],[2,9,6])
-ax[1].set_title("Explicit interface 2")
+ax[0].plot([4,9,3],[5,3,2])
+ax[1].plot([8,3,1],[9,5,4])
+
+ax[0].set_title("Modified")
 plt.show()
