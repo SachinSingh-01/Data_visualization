@@ -790,15 +790,71 @@ current figure
 after different plotting operations.
 Goal
 Understand pyplot state machine deeply.'''
-plt.figure(figsize=(8,9))
-plt.subplot(1,2,1)
-plt.plot([56,45,34],[34,56,78])
-plt.title("Get currect figure/ Get current axis -1")
-print(plt.gca())
-print(plt.gcf())
-plt.subplot(1,2,2)
-plt.plot([67,87,54],[78,98,88])
-plt.title("Get currect figure/ Get current axis -2")
-print(plt.gca())
-print(plt.gcf())
+# plt.figure(figsize=(8,9))
+# plt.subplot(1,2,1)
+# plt.plot([56,45,34],[34,56,78])
+# plt.title("Get currect figure/ Get current axis -1")
+# print(plt.gca())
+# print(plt.gcf())
+# plt.subplot(1,2,2)
+# plt.plot([67,87,54],[78,98,88])
+# plt.title("Get currect figure/ Get current axis -2")
+# print(plt.gca())
+# print(plt.gcf())
+# plt.show()
+
+# Question 30
+'''Create:
+4 subplots using pyplot only
+Then:
+accidentally modify wrong subplot
+debug issue
+Goal
+Experience pyplot confusion practically.'''
+# plt.figure(figsize=(8,2))
+# plt.subplot(1,2,1)
+# plt.plot([56,76,45],[3,4,5])
+# plt.title("First figure")
+# plt.figure(figsize=(8,2))
+# plt.subplot(1,2,1)
+# plt.plot([56,76,45],[3,4,5])
+# plt.title("First figure")
+# plt.figure(figsize=(8,2))
+# plt.subplot(1,2,1)
+# plt.plot([56,76,45],[3,4,5])
+# plt.title("First figure")
+# plt.figure(figsize=(8,2))
+# plt.subplot(1,2,1)
+# plt.plot([56,76,45],[3,4,5])
+# plt.title("First figure")
+
+# Question 31
+'''Create dashboard:
+4 subplots
+legends
+titles
+annotations
+ONLY using explicit axes style.
+Goal
+Build professional plotting habit.'''
+fig,ax=plt.subplots(2,2)
+ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
+ax[0,0].legend(loc="upper left")
+ax[0,0].annotate("Highest",(4,6))
+ax[0,0].set_title("Fig-1")
+
+ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
+ax[0,1].legend(loc="upper left")
+ax[0,1].annotate("Highest",(5,2))
+ax[0,1].set_title("Fig-2")
+
+ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
+ax[1,0].legend(loc="lower right")
+ax[1,0].annotate("Highest",(4,4))
+ax[1,0].set_title("Fig-3")
+
+ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
+ax[1,1].legend(loc="lower right")
+ax[1,1].annotate("Highest",(6,8))
+ax[1,1].set_title("Fig 4")
 plt.show()
