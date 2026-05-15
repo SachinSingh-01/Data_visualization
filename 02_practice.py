@@ -837,24 +837,39 @@ annotations
 ONLY using explicit axes style.
 Goal
 Build professional plotting habit.'''
+# fig,ax=plt.subplots(2,2)
+# ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
+# ax[0,0].legend(loc="upper left")
+# ax[0,0].annotate("Highest",(4,6))
+# ax[0,0].set_title("Fig-1")
+
+# ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
+# ax[0,1].legend(loc="upper left")
+# ax[0,1].annotate("Highest",(5,2))
+# ax[0,1].set_title("Fig-2")
+
+# ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
+# ax[1,0].legend(loc="lower right")
+# ax[1,0].annotate("Highest",(4,4))
+# ax[1,0].set_title("Fig-3")
+
+# ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
+# ax[1,1].legend(loc="lower right")
+# ax[1,1].annotate("Highest",(6,8))
+# ax[1,1].set_title("Fig 4")
+# plt.show()
+
+# Question 32
+'''Create helper function:
+def my_plot(ax, x, y):
+Pass different axes into function.'''
+def my_plot(ax, x, y):
+    ax.plot(x,y)
+x=[4,5,7,8]
+y=[4,3,2,6]
+a=[67,54,33,23]
+b=[34,23,64,23]
 fig,ax=plt.subplots(2,2)
-ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
-ax[0,0].legend(loc="upper left")
-ax[0,0].annotate("Highest",(4,6))
-ax[0,0].set_title("Fig-1")
-
-ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
-ax[0,1].legend(loc="upper left")
-ax[0,1].annotate("Highest",(5,2))
-ax[0,1].set_title("Fig-2")
-
-ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
-ax[1,0].legend(loc="lower right")
-ax[1,0].annotate("Highest",(4,4))
-ax[1,0].set_title("Fig-3")
-
-ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
-ax[1,1].legend(loc="lower right")
-ax[1,1].annotate("Highest",(6,8))
-ax[1,1].set_title("Fig 4")
+my_plot(ax[0,0],x,y)
+my_plot(ax[0,1],a,b)
 plt.show()
