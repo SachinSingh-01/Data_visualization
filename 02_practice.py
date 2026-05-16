@@ -863,13 +863,67 @@ Build professional plotting habit.'''
 '''Create helper function:
 def my_plot(ax, x, y):
 Pass different axes into function.'''
-def my_plot(ax, x, y):
-    ax.plot(x,y)
-x=[4,5,7,8]
-y=[4,3,2,6]
-a=[67,54,33,23]
-b=[34,23,64,23]
-fig,ax=plt.subplots(2,2)
+# def my_plot(ax, x, y):
+#     ax.plot(x,y)
+# x=[4,5,7,8]
+# y=[4,3,2,6]
+# a=[67,54,33,23]
+# b=[34,23,64,23]
+# fig,ax=plt.subplots(2,2)
+# my_plot(ax[0,0],x,y)
+# my_plot(ax[0,1],a,b)
+# plt.show()
+
+# Question 33
+'''Create custom class:
+class MyData:
+Store:
+x
+y
+Implement:
+plot()
+with optional:
+ax=None
+Goal
+Understand how pandas/seaborn style APIs work internally.'''
+# class MyData:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+#         plt.plot([3,4,5,3],[2,6,4,2])
+#         plt.show()
+
+# Question 34
+'''Build mini analytics dashboard:
+multiple axes
+pass axes into helper functions
+save figure
+ONLY explicit interface allowed.
+Goal
+Simulate real project architecture.'''
+def my_plot(ax,x,y):
+    ax.plot(x,y,label="data")
+x=[6,4,3,2]
+y=[5,9,2,1]
+fig,ax=plt.subplots(2,2,figsize=(8,2))
 my_plot(ax[0,0],x,y)
-my_plot(ax[0,1],a,b)
+ax[0,0].set_title("First figure")
+ax[0,0].legend(loc="upper left")
+ax[0,0].annotate("Highest",(5,2))
+
+my_plot(ax[0,1],x,y)
+ax[0,1].set_title("Second figure")
+ax[0,1].legend(loc="upper right")
+ax[0,1].annotate("Highest",(4,3))
+
+my_plot(ax[1,0],x,y)
+ax[1,0].set_title("Third figure")
+ax[1,0].legend(loc="lower left")
+ax[1,0].annotate("Highest",(2,5))
+
+my_plot(ax[1,1],x,y)
+ax[1,1].set_title("Fourth figure")
+ax[1,1].legend(loc="lower right")
+ax[1,1].annotate("Highest",(3,3))
+plt.savefig("Mini_dataplot.png")
 plt.show()
