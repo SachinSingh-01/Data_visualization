@@ -945,63 +945,80 @@ readability
 control
 Goal
 Feel WHY explicit interface wins.'''
-plt.figure(figsize=(8,2))
+# plt.figure(figsize=(8,2))
 
-plt.subplot(2,3,1)
-plt.plot([56,76,45],[3,4,5])
-plt.title("First figure")
+# plt.subplot(2,3,1)
+# plt.plot([56,76,45],[3,4,5])
+# plt.title("First figure")
 
-plt.subplot(2,3,2)
-plt.plot([76,34,23],[6,9,2])
-plt.title("Second figure")
+# plt.subplot(2,3,2)
+# plt.plot([76,34,23],[6,9,2])
+# plt.title("Second figure")
 
-plt.subplot(2,3,3)
-plt.plot([5,7,5],[67,34,21])
-plt.title("Third figure")
+# plt.subplot(2,3,3)
+# plt.plot([5,7,5],[67,34,21])
+# plt.title("Third figure")
 
-plt.subplot(2,3,4)
-plt.plot([76,45,45],[23,45,12])
-plt.title("Fourth figure")
+# plt.subplot(2,3,4)
+# plt.plot([76,45,45],[23,45,12])
+# plt.title("Fourth figure")
 
-plt.subplot(2,3,5)
-plt.plot([45,23,62],[23,4,1])
-plt.title("Fifth figure")
+# plt.subplot(2,3,5)
+# plt.plot([45,23,62],[23,4,1])
+# plt.title("Fifth figure")
 
-plt.subplot(2,3,6)
-plt.plot([54,2,12],[23,61,23])
-plt.title("Sixth figure")
-plt.show()
+# plt.subplot(2,3,6)
+# plt.plot([54,2,12],[23,61,23])
+# plt.title("Sixth figure")
+# plt.show()
 
 # Explicit function
 
-fig,ax=plt.subplots(2,3)
-ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
-ax[0,0].legend(loc="upper left")
-ax[0,0].annotate("Highest",(4,6))
-ax[0,0].set_title("Fig-1")
+# fig,ax=plt.subplots(2,3)
+# ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
+# ax[0,0].legend(loc="upper left")
+# ax[0,0].annotate("Highest",(4,6))
+# ax[0,0].set_title("Fig-1")
 
-ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
-ax[0,1].legend(loc="upper left")
-ax[0,1].annotate("Highest",(5,2))
-ax[0,1].set_title("Fig-2")
+# ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
+# ax[0,1].legend(loc="upper left")
+# ax[0,1].annotate("Highest",(5,2))
+# ax[0,1].set_title("Fig-2")
 
-ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
-ax[1,0].legend(loc="lower right")
-ax[1,0].annotate("Highest",(4,4))
-ax[1,0].set_title("Fig-3")
+# ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
+# ax[1,0].legend(loc="lower right")
+# ax[1,0].annotate("Highest",(4,4))
+# ax[1,0].set_title("Fig-3")
 
-ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
-ax[1,1].legend(loc="lower right")
-ax[1,1].annotate("Highest",(7,4))
-ax[1,1].set_title("Fig 4")
+# ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
+# ax[1,1].legend(loc="lower right")
+# ax[1,1].annotate("Highest",(7,4))
+# ax[1,1].set_title("Fig 4")
 
-ax[0,2].plot([7,2,8],[2,9,4],label="Data 5")
-ax[0,2].legend(loc="lower right")
-ax[0,2].annotate("Highest",(4,3))
-ax[0,2].set_title("Fig 5")
+# ax[0,2].plot([7,2,8],[2,9,4],label="Data 5")
+# ax[0,2].legend(loc="lower right")
+# ax[0,2].annotate("Highest",(4,3))
+# ax[0,2].set_title("Fig 5")
 
-ax[1,2].plot([5,8,3],[9,4,2],label="Data 6")
-ax[1,2].legend(loc="lower right")
-ax[1,2].annotate("Highest",(2,5))
-ax[1,2].set_title("Fig 6")
-plt.show()
+# ax[1,2].plot([5,8,3],[9,4,2],label="Data 6")
+# ax[1,2].legend(loc="lower right")
+# ax[1,2].annotate("Highest",(2,5))
+# ax[1,2].set_title("Fig 6")
+# plt.show()
+
+# Question 37
+'''Create plot with:
+plt.ion()
+Then:
+modify title
+modify line color
+modify labels
+Observe:
+automatic redraw behavior'''
+plt.ion()
+line,=plt.plot([4,3,2],[7,5,1])
+plt.title("Ion plot")
+line.set_color("green")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.show(block=True)  
