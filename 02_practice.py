@@ -1015,10 +1015,79 @@ modify line color
 modify labels
 Observe:
 automatic redraw behavior'''
-plt.ion()
-line,=plt.plot([4,3,2],[7,5,1])
-plt.title("Ion plot")
-line.set_color("green")
-plt.xlabel("x-axis")
-plt.ylabel("y-axis")
-plt.show(block=True)  
+# plt.ion()
+# line,=plt.plot([4,3,2],[7,5,1])
+# plt.title("Ion plot")
+# line.set_color("green")
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
+# plt.show(block=True)  
+
+# Question 38
+'''Use:
+plt.ioff()
+Observe:
+figures not updating automatically
+need for plt.show()'''
+# plt.ioff()
+# plt.plot([87,23,29],[65,34,54])
+# plt.title("Ioff")
+# plt.xlabel("X-axis")
+# plt.ylabel("y-axis")
+# plt.show()
+
+# Question 39
+'''Create:
+3 figures
+Use:
+plt.gcf()
+plt.close()
+plt.close('all')
+Understand:
+how pyplot stores figures'''
+# plt.figure(figsize=(8,3))
+# plt.subplot(2,2)
+
+
+# Question 40
+'''Create SAME dashboard:
+pyplot style
+explicit axes style
+Compare:
+readability
+debugging
+modification ease
+VERY important exercise.'''
+# pyplot style
+plt.figure(figsize=(8,2))
+plt.subplot(2,2,1)
+plt.plot([4,3,2],[8,6,9])
+plt.title("Pyplot 1")
+
+plt.subplot(2,2,2)
+plt.plot([7,3,2],[9,8,2])
+plt.title("Pyplot 2")
+
+plt.subplot(2,2,3)
+plt.plot([9,2,7],[4,8,2])
+plt.title("Pyplot 2")
+
+plt.subplot(2,2,4)
+plt.plot([6,3,9],[9,2,7])
+plt.title("Pyplot 2")
+# plt.show()
+
+# Explicit style
+fig,ax=plt.subplots(2,2)
+ax[0,0].plot([7,5,3],[3,9,2],label="Data 1")
+ax[0,0].set_title("Explicit 1")
+
+ax[0,1].plot([9,2,8],[7,0,1],label="Data 2")
+ax[0,1].set_title("Explicit 2")
+
+ax[1,0].plot([7,4,3],[2,8,9],label="Data 3")
+ax[1,0].set_title("Explicit 3")
+
+ax[1,1].plot([3,8,2],[4,8,6],label="Data 4")
+ax[1,1].set_title("Explicit 4")
+plt.show()
