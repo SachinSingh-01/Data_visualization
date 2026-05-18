@@ -145,8 +145,8 @@ Right axis → linear data'''
 # b = np.sin(x)
 # fig, ax1 = plt.subplots()
 # ax1.plot(x, b, color='blue', label="Sine Wave")
-# ax1.set_xlabel("X-axis")
-# ax1.set_ylabel("Sine Wave", color='blue')
+# ax1.xlabel("X-axis")
+# ax1.ylabel("Sine Wave", color='blue')
 # ax2 = ax1.twinx()
 # ax2.plot(x, y, color='red', label="Linear Data")
 # ax2.set_ylabel("Linear Data", color='red')
@@ -230,8 +230,8 @@ custom figure size'''
 #                   layout="constrained",
 #                   facecolor="yellow")
 # fig.suptitle("Sachin",fontsize=20)
-# ax=fig.add_subplot()
-# ax.set_title("Figure")
+# plt=fig.add_subplot()
+# plt.set_title("Figure")
 # plt.plot([2,3,4],[5,6,7])
 # plt.show()
 
@@ -552,24 +552,24 @@ Requirements:
 figure title
 custom colors
 Hint:use:subplot_mosaic()'''
-# fig,ax=plt.subplot_mosaic(
+# fig,plt=plt.subplot_mosaic(
 #     [
 #         ["top","top"],
 #         ["left","right"]
 #     ],
 #     figsize=(8,6)
 # )
-# ax["top"].plot([3,4,7,2],[2,6,8,6],color="blue")
-# ax["top"].set_title("Top plot")
-# ax["top"].set_facecolor("yellow")
+# plt["top"].plot([3,4,7,2],[2,6,8,6],color="blue")
+# plt["top"].set_title("Top plot")
+# plt["top"].set_facecolor("yellow")
 
-# ax["left"].plot([9,7,4,3],[4,8,9,3],color="red")
-# ax["left"].set_title("left plot")
-# ax["left"].set_facecolor("green")
+# plt["left"].plot([9,7,4,3],[4,8,9,3],color="red")
+# plt["left"].set_title("left plot")
+# plt["left"].set_facecolor("green")
 
-# ax["right"].plot([2,5,7,8],[9,6,3,5],color="brown")
-# ax["right"].set_title("right plot")
-# ax["right"].set_facecolor("purple")
+# plt["right"].plot([2,5,7,8],[9,6,3,5],color="brown")
+# plt["right"].set_title("right plot")
+# plt["right"].set_facecolor("purple")
 # plt.suptitle("Dashboard style figure",fontsize=20)
 # plt.tight_layout()
 # plt.show()
@@ -698,7 +698,7 @@ subplot_mosaic
 subfigures
 custom figsize
 constrained layout'''
-# fig,ax=plt.subplot_mosaic(
+# fig,plt=plt.subplot_mosaic(
 #     [
 #     ["top", "top"],
 #     ["left", "right"],
@@ -707,22 +707,22 @@ constrained layout'''
 #     figsize=(8,6),
 #     layout="constrained"
 # )
-# ax["top"].plot([5,7,8,9,6])
-# ax["top"].set_title("Line plot")
+# plt["top"].plot([5,7,8,9,6])
+# plt["top"].set_title("Line plot")
 
 # x=[7,8,6,5]
 # y=[7,9,2,4]
-# ax["left"].scatter(x,y)
-# ax["left"].set_title("scatter plot")
+# plt["left"].scatter(x,y)
+# plt["left"].set_title("scatter plot")
 
 # a=[7,9,2,7,5]
-# ax["right"].hist(a)
-# ax["right"].set_title("Histogram Plot")
+# plt["right"].hist(a)
+# plt["right"].set_title("Histogram Plot")
 
 # s=[8,9,5,3,2]
 # k=[6,4,3,9,0]
-# ax["bottom"].bar(s,k)
-# ax["bottom"].set_title("Bar plot")
+# plt["bottom"].bar(s,k)
+# plt["bottom"].set_title("Bar plot")
 
 # plt.tight_layout()
 # plt.show()
@@ -746,11 +746,11 @@ scalability'''
 # plt.title("Pyplot interface 2")
 
 # # Using explicit  interface
-# fig,ax=plt.subplots(1,2)
-# ax[0].plot([5,7,8],[3,2,1])
-# ax[0].set_title("Explicit interface 1")
-# ax[1].plot([3,2,7],[2,9,6])
-# ax[1].set_title("Explicit interface 2")
+# fig,plt=plt.subplots(1,2)
+# plt[0].plot([5,7,8],[3,2,1])
+# plt[0].set_title("Explicit interface 1")
+# plt[1].plot([3,2,7],[2,9,6])
+# plt[1].set_title("Explicit interface 2")
 # plt.show()
 
 # Question 28
@@ -773,11 +773,11 @@ Observe difference.'''
 # plt.subplot(1,2,1)
 # plt.title("Modified")
 
-# fig,ax=plt.subplots(1,2)
-# ax[0].plot([4,9,3],[5,3,2])
-# ax[1].plot([8,3,1],[9,5,4])
+# fig,plt=plt.subplots(1,2)
+# plt[0].plot([4,9,3],[5,3,2])
+# plt[1].plot([8,3,1],[9,5,4])
 
-# ax[0].set_title("Modified")
+# plt[0].set_title("Modified")
 # plt.show()
 
 # Question 29
@@ -843,41 +843,41 @@ annotations
 ONLY using explicit axes style.
 Goal
 Build professional plotting habit.'''
-# fig,ax=plt.subplots(2,2)
-# ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
-# ax[0,0].legend(loc="upper left")
-# ax[0,0].annotate("Highest",(4,6))
-# ax[0,0].set_title("Fig-1")
+# fig,plt=plt.subplots(2,2)
+# plt[0,0].plot([4,5,7],[6,4,3],label="Data 1")
+# plt[0,0].legend(loc="upper left")
+# plt[0,0].annotate("Highest",(4,6))
+# plt[0,0].set_title("Fig-1")
 
-# ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
-# ax[0,1].legend(loc="upper left")
-# ax[0,1].annotate("Highest",(5,2))
-# ax[0,1].set_title("Fig-2")
+# plt[0,1].plot([7,5,3],[4,3,2],label="Data 2")
+# plt[0,1].legend(loc="upper left")
+# plt[0,1].annotate("Highest",(5,2))
+# plt[0,1].set_title("Fig-2")
 
-# ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
-# ax[1,0].legend(loc="lower right")
-# ax[1,0].annotate("Highest",(4,4))
-# ax[1,0].set_title("Fig-3")
+# plt[1,0].plot([6,7,4],[9,2,4],label="Data 3")
+# plt[1,0].legend(loc="lower right")
+# plt[1,0].annotate("Highest",(4,4))
+# plt[1,0].set_title("Fig-3")
 
-# ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
-# ax[1,1].legend(loc="lower right")
-# ax[1,1].annotate("Highest",(6,8))
-# ax[1,1].set_title("Fig 4")
+# plt[1,1].plot([3,2,6],[7,8,3],label="Data 4")
+# plt[1,1].legend(loc="lower right")
+# plt[1,1].annotate("Highest",(6,8))
+# plt[1,1].set_title("Fig 4")
 # plt.show()
 
 # Question 32
 '''Create helper function:
-def my_plot(ax, x, y):
+def my_plot(plt, x, y):
 Pass different axes into function.'''
-# def my_plot(ax, x, y):
-#     ax.plot(x,y)
+# def my_plot(plt, x, y):
+#     plt.plot(x,y)
 # x=[4,5,7,8]
 # y=[4,3,2,6]
 # a=[67,54,33,23]
 # b=[34,23,64,23]
-# fig,ax=plt.subplots(2,2)
-# my_plot(ax[0,0],x,y)
-# my_plot(ax[0,1],a,b)
+# fig,plt=plt.subplots(2,2)
+# my_plot(plt[0,0],x,y)
+# my_plot(plt[0,1],a,b)
 # plt.show()
 
 # Question 33
@@ -889,7 +889,7 @@ y
 Implement:
 plot()
 with optional:
-ax=None
+plt=None
 Goal
 Understand how pandas/seaborn style APIs work internally.'''
 # class MyData:
@@ -907,30 +907,30 @@ save figure
 ONLY explicit interface allowed.
 Goal
 Simulate real project architecture.'''
-# def my_plot(ax,x,y):
-#     ax.plot(x,y,label="data")
+# def my_plot(plt,x,y):
+#     plt.plot(x,y,label="data")
 # x=[6,4,3,2]
 # y=[5,9,2,1]
-# fig,ax=plt.subplots(2,2,figsize=(8,2))
-# my_plot(ax[0,0],x,y)
-# ax[0,0].set_title("First figure")
-# ax[0,0].legend(loc="upper left")
-# ax[0,0].annotate("Highest",(5,2))
+# fig,plt=plt.subplots(2,2,figsize=(8,2))
+# my_plot(plt[0,0],x,y)
+# plt[0,0].set_title("First figure")
+# plt[0,0].legend(loc="upper left")
+# plt[0,0].annotate("Highest",(5,2))
 
-# my_plot(ax[0,1],x,y)
-# ax[0,1].set_title("Second figure")
-# ax[0,1].legend(loc="upper right")
-# ax[0,1].annotate("Highest",(4,3))
+# my_plot(plt[0,1],x,y)
+# plt[0,1].set_title("Second figure")
+# plt[0,1].legend(loc="upper right")
+# plt[0,1].annotate("Highest",(4,3))
 
-# my_plot(ax[1,0],x,y)
-# ax[1,0].set_title("Third figure")
-# ax[1,0].legend(loc="lower left")
-# ax[1,0].annotate("Highest",(2,5))
+# my_plot(plt[1,0],x,y)
+# plt[1,0].set_title("Third figure")
+# plt[1,0].legend(loc="lower left")
+# plt[1,0].annotate("Highest",(2,5))
 
-# my_plot(ax[1,1],x,y)
-# ax[1,1].set_title("Fourth figure")
-# ax[1,1].legend(loc="lower right")
-# ax[1,1].annotate("Highest",(3,3))
+# my_plot(plt[1,1],x,y)
+# plt[1,1].set_title("Fourth figure")
+# plt[1,1].legend(loc="lower right")
+# plt[1,1].annotate("Highest",(3,3))
 # plt.savefig("Mini_dataplot.png")
 # plt.show()
 
@@ -974,36 +974,36 @@ Feel WHY explicit interface wins.'''
 
 # Explicit function
 
-# fig,ax=plt.subplots(2,3)
-# ax[0,0].plot([4,5,7],[6,4,3],label="Data 1")
-# ax[0,0].legend(loc="upper left")
-# ax[0,0].annotate("Highest",(4,6))
-# ax[0,0].set_title("Fig-1")
+# fig,plt=plt.subplots(2,3)
+# plt[0,0].plot([4,5,7],[6,4,3],label="Data 1")
+# plt[0,0].legend(loc="upper left")
+# plt[0,0].annotate("Highest",(4,6))
+# plt[0,0].set_title("Fig-1")
 
-# ax[0,1].plot([7,5,3],[4,3,2],label="Data 2")
-# ax[0,1].legend(loc="upper left")
-# ax[0,1].annotate("Highest",(5,2))
-# ax[0,1].set_title("Fig-2")
+# plt[0,1].plot([7,5,3],[4,3,2],label="Data 2")
+# plt[0,1].legend(loc="upper left")
+# plt[0,1].annotate("Highest",(5,2))
+# plt[0,1].set_title("Fig-2")
 
-# ax[1,0].plot([6,7,4],[9,2,4],label="Data 3")
-# ax[1,0].legend(loc="lower right")
-# ax[1,0].annotate("Highest",(4,4))
-# ax[1,0].set_title("Fig-3")
+# plt[1,0].plot([6,7,4],[9,2,4],label="Data 3")
+# plt[1,0].legend(loc="lower right")
+# plt[1,0].annotate("Highest",(4,4))
+# plt[1,0].set_title("Fig-3")
 
-# ax[1,1].plot([3,2,6],[7,8,3],label="Data 4")
-# ax[1,1].legend(loc="lower right")
-# ax[1,1].annotate("Highest",(7,4))
-# ax[1,1].set_title("Fig 4")
+# plt[1,1].plot([3,2,6],[7,8,3],label="Data 4")
+# plt[1,1].legend(loc="lower right")
+# plt[1,1].annotate("Highest",(7,4))
+# plt[1,1].set_title("Fig 4")
 
-# ax[0,2].plot([7,2,8],[2,9,4],label="Data 5")
-# ax[0,2].legend(loc="lower right")
-# ax[0,2].annotate("Highest",(4,3))
-# ax[0,2].set_title("Fig 5")
+# plt[0,2].plot([7,2,8],[2,9,4],label="Data 5")
+# plt[0,2].legend(loc="lower right")
+# plt[0,2].annotate("Highest",(4,3))
+# plt[0,2].set_title("Fig 5")
 
-# ax[1,2].plot([5,8,3],[9,4,2],label="Data 6")
-# ax[1,2].legend(loc="lower right")
-# ax[1,2].annotate("Highest",(2,5))
-# ax[1,2].set_title("Fig 6")
+# plt[1,2].plot([5,8,3],[9,4,2],label="Data 6")
+# plt[1,2].legend(loc="lower right")
+# plt[1,2].annotate("Highest",(2,5))
+# plt[1,2].set_title("Fig 6")
 # plt.show()
 
 # Question 37
@@ -1059,35 +1059,99 @@ debugging
 modification ease
 VERY important exercise.'''
 # pyplot style
-plt.figure(figsize=(8,2))
-plt.subplot(2,2,1)
-plt.plot([4,3,2],[8,6,9])
-plt.title("Pyplot 1")
+# plt.figure(figsize=(8,2))
+# plt.subplot(2,2,1)
+# plt.plot([4,3,2],[8,6,9])
+# plt.title("Pyplot 1")
 
-plt.subplot(2,2,2)
-plt.plot([7,3,2],[9,8,2])
-plt.title("Pyplot 2")
+# plt.subplot(2,2,2)
+# plt.plot([7,3,2],[9,8,2])
+# plt.title("Pyplot 2")
 
-plt.subplot(2,2,3)
-plt.plot([9,2,7],[4,8,2])
-plt.title("Pyplot 2")
+# plt.subplot(2,2,3)
+# plt.plot([9,2,7],[4,8,2])
+# plt.title("Pyplot 2")
 
-plt.subplot(2,2,4)
-plt.plot([6,3,9],[9,2,7])
-plt.title("Pyplot 2")
+# plt.subplot(2,2,4)
+# plt.plot([6,3,9],[9,2,7])
+# plt.title("Pyplot 2")
+
+# # Explicit style
+# fig,plt=plt.subplots(2,2)
+# plt[0,0].plot([7,5,3],[3,9,2],label="Data 1")
+# plt[0,0].set_title("Explicit 1")
+
+# plt[0,1].plot([9,2,8],[7,0,1],label="Data 2")
+# plt[0,1].set_title("Explicit 2")
+
+# plt[1,0].plot([7,4,3],[2,8,9],label="Data 3")
+# plt[1,0].set_title("Explicit 3")
+
+# plt[1,1].plot([3,8,2],[4,8,6],label="Data 4")
+# plt[1,1].set_title("Explicit 4")
 # plt.show()
 
-# Explicit style
-fig,ax=plt.subplots(2,2)
-ax[0,0].plot([7,5,3],[3,9,2],label="Data 1")
-ax[0,0].set_title("Explicit 1")
+# Question 41
 
-ax[0,1].plot([9,2,8],[7,0,1],label="Data 2")
-ax[0,1].set_title("Explicit 2")
+'''Create:
+one Figure
+one Axes
+Requirements:
+figure background color
+figure title
+axes title
+x/y labels
+line plot
+Goal
+Understand:
+Figure ≠ Axes'''
+# fig,plt=plt.subplots(figsize=(8,2))
+# plt.plot([45,34,23],[78,98,34])
+# plt.subplots(facecolor=("red"))
+# plt.set_title("Ploting")
+# plt.xlabel("X-axis")
+# plt.ylabel("Y-axis")
+# plt.show()
 
-ax[1,0].plot([7,4,3],[2,8,9],label="Data 3")
-ax[1,0].set_title("Explicit 3")
+# Question 42
+'''Create:
+2x2 subplot grid
+Requirements:
+each subplot must contain different plot type
+different titles
+different colors
+Use:
+line
+scatter
+histogram
+bar'''
+# fig=plt.subplot(figsize=(8,2))
+plt.subplot(2,2,1)
+plt.plot([45,23,91],[97,83,26],color="red")
+plt.title("Line ploting")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
 
-ax[1,1].plot([3,8,2],[4,8,6],label="Data 4")
-ax[1,1].set_title("Explicit 4")
+x=[86,32,45]
+y=[67,45,34]
+plt.subplot(2,2,2)
+plt.hist(x,color="pink")
+plt.title("Histogram ploting")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+
+plt.subplot(2,2,3)
+plt.scatter(x,y,color="green")
+plt.title("Scatter ploting")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+
+plt.subplot(2,2,4)
+plt.bar(x,y,color="blue")
+plt.title("Bar ploting")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+
+plt.tight_layout()
 plt.show()
+
