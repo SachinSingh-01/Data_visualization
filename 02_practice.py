@@ -1126,32 +1126,54 @@ scatter
 histogram
 bar'''
 # fig=plt.subplot(figsize=(8,2))
-plt.subplot(2,2,1)
-plt.plot([45,23,91],[97,83,26],color="red")
-plt.title("Line ploting")
-plt.xlabel("x-axis")
-plt.ylabel("y-axis")
+# plt.subplot(2,2,1)
+# plt.plot([45,23,91],[97,83,26],color="red")
+# plt.title("Line ploting")
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
 
-x=[86,32,45]
-y=[67,45,34]
-plt.subplot(2,2,2)
-plt.hist(x,color="pink")
-plt.title("Histogram ploting")
-plt.xlabel("x-axis")
-plt.ylabel("y-axis")
+# x=[86,32,45]
+# y=[67,45,34]
+# plt.subplot(2,2,2)
+# plt.hist(x,color="pink")
+# plt.title("Histogram ploting")
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
 
-plt.subplot(2,2,3)
-plt.scatter(x,y,color="green")
-plt.title("Scatter ploting")
-plt.xlabel("x-axis")
-plt.ylabel("y-axis")
+# plt.subplot(2,2,3)
+# plt.scatter(x,y,color="green")
+# plt.title("Scatter ploting")
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
 
-plt.subplot(2,2,4)
-plt.bar(x,y,color="blue")
-plt.title("Bar ploting")
-plt.xlabel("x-axis")
-plt.ylabel("y-axis")
+# plt.subplot(2,2,4)
+# plt.bar(x,y,color="blue")
+# plt.title("Bar ploting")
+# plt.xlabel("x-axis")
+# plt.ylabel("y-axis")
 
-plt.tight_layout()
+# plt.tight_layout()
+# plt.show()
+
+# Question 43
+'''Create:
+6 subplots
+Use loops to:
+set titles
+set labels
+add grids
+Goal
+Think like dashboard engineer.'''
+fig,ax=plt.subplots(2,3)
+ax[0,0].plot([6,3,1],[6,8,9])
+ax[0,1].plot([6,3,1],[6,8,9])
+ax[0,2].plot([6,3,1],[6,8,9])
+ax[1,0].plot([6,3,1],[6,8,9])
+ax[1,1].plot([6,3,1],[6,8,9])
+ax[1,2].plot([6,3,1],[6,8,9])
+for a in ax.flat:
+    a.set_title("Plot ")
+    a.set_xlabel("x-axis")
+    a.set_ylabel("y-axis")
+    a.grid(True)
 plt.show()
-
