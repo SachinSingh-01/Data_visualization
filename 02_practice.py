@@ -1164,16 +1164,26 @@ set labels
 add grids
 Goal
 Think like dashboard engineer.'''
-fig,ax=plt.subplots(2,3)
-ax[0,0].plot([6,3,1],[6,8,9])
-ax[0,1].plot([6,3,1],[6,8,9])
-ax[0,2].plot([6,3,1],[6,8,9])
-ax[1,0].plot([6,3,1],[6,8,9])
-ax[1,1].plot([6,3,1],[6,8,9])
-ax[1,2].plot([6,3,1],[6,8,9])
-for a in ax.flat:
-    a.set_title("Plot ")
-    a.set_xlabel("x-axis")
-    a.set_ylabel("y-axis")
-    a.grid(True)
+# fig,ax=plt.subplots(2,3)
+# ax[0,0].plot([6,3,1],[6,8,9])
+# ax[0,1].plot([6,3,1],[6,8,9])
+# ax[0,2].plot([6,3,1],[6,8,9])
+# ax[1,0].plot([6,3,1],[6,8,9])
+# ax[1,1].plot([6,3,1],[6,8,9])
+# ax[1,2].plot([6,3,1],[6,8,9])
+# for a in ax.flat:
+#     a.set_title("Plot ")
+#     a.set_xlabel("x-axis")
+#     a.set_ylabel("y-axis")
+#     a.grid(True)
+# plt.show()
+
+# Question 44
+'''Create plot with large data.
+Then:
+zoom using set_xlim
+zoom using set_ylim'''
+plt.plot([56,78,23,44,54,34,98],[78,56,43,87,56,32,56])
+plt.xlim(27,34)
+plt.ylim(34,67)
 plt.show()
