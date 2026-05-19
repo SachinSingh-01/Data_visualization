@@ -1183,7 +1183,29 @@ Think like dashboard engineer.'''
 Then:
 zoom using set_xlim
 zoom using set_ylim'''
-plt.plot([56,78,23,44,54,34,98],[78,56,43,87,56,32,56])
-plt.xlim(27,34)
-plt.ylim(34,67)
+# plt.plot([56,78,23,44,54,34,98],[78,56,43,87,56,32,56])
+# plt.xlim(27,34)
+# plt.ylim(34,67)
+# plt.show()
+
+# Question 45
+'''Generate exponentially growing data.
+Requirements:
+normal scale subplot
+log scale subplot'''
+x=np.arange(1,10)
+y=np.exp(x)
+fig,ax=plt.subplots(1,2,figsize=(10,2))
+ax[0].plot(x,y)
+ax[0].set_title("normal plot")
+ax[0].set_xlabel("X-axis")
+ax[0].set_ylabel("Y-axis")
+
+ax[1].plot(x,y)
+ax[1].set_yscale("log")
+ax[1].set_title("log plot")
+ax[1].set_xlabel("X-axis")
+ax[1].set_ylabel("Y-axis")
+
+plt.tight_layout()
 plt.show()
