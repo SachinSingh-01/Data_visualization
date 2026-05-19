@@ -1193,19 +1193,47 @@ zoom using set_ylim'''
 Requirements:
 normal scale subplot
 log scale subplot'''
-x=np.arange(1,10)
-y=np.exp(x)
+# x=np.arange(1,10)
+# y=np.exp(x)
+# fig,ax=plt.subplots(1,2,figsize=(10,2))
+# ax[0].plot(x,y)
+# ax[0].set_title("normal plot")
+# ax[0].set_xlabel("X-axis")
+# ax[0].set_ylabel("Y-axis")
+
+# ax[1].plot(x,y)
+# ax[1].set_yscale("log")
+# ax[1].set_title("log plot")
+# ax[1].set_xlabel("X-axis")
+# ax[1].set_ylabel("Y-axis")
+
+# plt.tight_layout()
+# plt.show()
+
+# Question 46
+'''Create custom ticks.
+Requirements:
+custom tick locations
+custom tick labels
+colored ticks
+ticks on top
+Use:
+tick_params()'''
 fig,ax=plt.subplots(1,2,figsize=(10,2))
-ax[0].plot(x,y)
-ax[0].set_title("normal plot")
-ax[0].set_xlabel("X-axis")
-ax[0].set_ylabel("Y-axis")
+x=[54,23,78]
+y=[23,87,67]
+ax[0].plot(x,y,color="blue")
+ax[0].set_xticks([20,40,60])
+ax[0].set_xticklabels(["Twenty","fourty","sixty"])
+ax[0].tick_params(axis="x",colors="red",top=True)
+ax[0].tick_params(axis="y",colors="green")
+ax[0].set_title("first plot")
 
-ax[1].plot(x,y)
-ax[1].set_yscale("log")
-ax[1].set_title("log plot")
-ax[1].set_xlabel("X-axis")
-ax[1].set_ylabel("Y-axis")
-
+ax[1].plot(x,y,color="yellow")
+ax[1].set_xticks([45,34,21])
+ax[1].set_xticklabels(["A","B","C"])
+ax[1].tick_params(axis="x",colors="brown",top=True)
+ax[1].tick_params(axis="y",colors="orange")
+ax[1].set_title("second plot")
 plt.tight_layout()
 plt.show()
