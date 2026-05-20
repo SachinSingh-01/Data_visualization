@@ -1319,7 +1319,49 @@ fig.add_axes()
 Create:
 main plot
 small inset plot'''
-fig=plt.figure()
-main_ax=fig.add_axes([0.1, 0.1, 0.8, 0.8])
-inset_ax=fig.add_axes([0.6, 0.6, 0.2, 0.2])
+# fig=plt.figure()
+# main_ax=fig.add_axes([0.1, 0.1, 0.8, 0.8])
+# inset_ax=fig.add_axes([0.6, 0.6, 0.2, 0.2])
+# plt.show()
+
+# Question 51
+'''Connect:
+button_press_event
+Print:
+xdata
+ydata'''
+# fig=plt.figure()
+
+
+# Question 52
+'''When mouse enters axes:
+background becomes yellow
+When mouse leaves:
+background resets'''
+fig, ax = plt.subplots()
+
+# Sample plot
+ax.plot([1,2,3], [4,5,6])
+
+# Function when mouse enters axes
+def on_enter(event):
+    ax.set_facecolor("yellow")
+    fig.canvas.draw()
+
+# Function when mouse leaves axes
+def on_leave(event):
+    ax.set_facecolor("white")
+    fig.canvas.draw()
+
+# Connect events
+fig.canvas.mpl_connect(
+    "axes_enter_event",
+    on_enter
+)
+
+fig.canvas.mpl_connect(
+    "axes_leave_event",
+    on_leave
+)
+
 plt.show()
