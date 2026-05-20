@@ -1247,22 +1247,76 @@ add grid
 customize tick appearance
 Goal
 Professional plotting style.'''
-fig,ax=plt.subplots(1,2,figsize=(10,2))
-x=[34,89,23]
-y=[56,34,98]
-ax[0].plot(x,y,color="red")
-ax[0].set_xticks([32,51,24])
-ax[0].minorticks_on()
-ax[0].set_xticklabels(["A","B","C"])
-ax[0].tick_params(axis="x",colors="brown",direction="in",length=4,width=7)
-ax[0].tick_params(axis="y",colors="green",direction="in",length=9,width=5)
-ax[0].grid(which="minor")
+# fig,ax=plt.subplots(1,2,figsize=(10,2))
+# x=[34,89,23]
+# y=[56,34,98]
+# ax[0].plot(x,y,color="red")
+# ax[0].set_xticks([32,51,24])
+# ax[0].minorticks_on()
+# ax[0].set_xticklabels(["A","B","C"])
+# ax[0].tick_params(axis="x",colors="brown",direction="in",length=4,width=7)
+# ax[0].tick_params(axis="y",colors="green",direction="in",length=9,width=5)
+# ax[0].grid(which="minor")
 
-ax[1].plot(x,y,color="silver")
-ax[1].set_xticks([42,47,68])
-ax[1].minorticks_on()
-ax[1].set_xticklabels(["A","B","C"])
-ax[1].tick_params(axis="x",colors="brown",direction="in",length=9,width=2)
-ax[1].tick_params(axis="y",colors="green",direction="in",length=3,width=6)
-ax[1].grid(which="minor")
+# ax[1].plot(x,y,color="silver")
+# ax[1].set_xticks([42,47,68])
+# ax[1].minorticks_on()
+# ax[1].set_xticklabels(["A","B","C"])
+# ax[1].tick_params(axis="x",colors="brown",direction="in",length=9,width=2)
+# ax[1].tick_params(axis="y",colors="green",direction="in",length=3,width=6)
+# ax[1].grid(which="minor")
+# plt.show()
+
+# Question 48
+'''Create layout:
+left     right
+bottom   bottom
+Requirements:
+each region has different chart
+titles
+legends'''
+# fig,ax=plt.subplot_mosaic(
+#                           [
+#                             ["left", "right"],
+#                             ["bottom", "bottom"]
+#                           ],
+#                           figsize=(8,2)
+# )
+# ax["left"].plot([34,23,65],[45,23,43],label="left data")
+# ax["left"].set_title("Left plot")
+# ax["left"].legend(loc="upper left")
+
+# ax["right"].plot([45,23,65],[23,76,12],label="right data")
+# ax["right"].set_title("Right plot")
+# ax["right"].legend(loc="upper right")
+
+# ax["bottom"].plot([23,76,34],[21,13,17],label="left data")
+# ax["bottom"].legend(loc="lower left")
+
+# ax["bottom"].plot([45,23,43],[34,23,65],label="right data")
+# ax["bottom"].set_title("lower plot")
+# ax["bottom"].legend(loc="lower right")
+# plt.show()
+
+# Question 49
+'''Plot same data twice:
+default aspect
+custom aspect
+Observe visual distortion.'''
+fig,ax=plt.subplots(1,2)
+ax[0].plot([4,5,7],[9,2,8])
+ax[0].set_title("Default plot")
+ax[0].set_xlabel("x-axis")
+ax[0].set_ylabel("y-axis")
+
+ax[1].set_aspect("equal")
+ax[1].plot([4,5,7],[9,2,8])
 plt.show()
+# Question 50
+'''Use:
+fig.add_axes()
+Create:
+main plot
+small inset plot'''
+# fig,ax=plt.subplots(1,2,figsize=(5,2))
+# fig.add_axes()
