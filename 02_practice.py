@@ -1219,21 +1219,50 @@ colored ticks
 ticks on top
 Use:
 tick_params()'''
-fig,ax=plt.subplots(1,2,figsize=(10,2))
-x=[54,23,78]
-y=[23,87,67]
-ax[0].plot(x,y,color="blue")
-ax[0].set_xticks([20,40,60])
-ax[0].set_xticklabels(["Twenty","fourty","sixty"])
-ax[0].tick_params(axis="x",colors="red",top=True)
-ax[0].tick_params(axis="y",colors="green")
-ax[0].set_title("first plot")
+# fig,ax=plt.subplots(1,2,figsize=(10,2))
+# x=[54,23,78]
+# y=[23,87,67]
+# ax[0].plot(x,y,color="blue")
+# ax[0].set_xticks([20,40,60])
+# ax[0].set_xticklabels(["Twenty","fourty","sixty"])
+# ax[0].tick_params(axis="x",colors="red",top=True)
+# ax[0].tick_params(axis="y",colors="green")
+# ax[0].set_title("first plot")
 
-ax[1].plot(x,y,color="yellow")
-ax[1].set_xticks([45,34,21])
+# ax[1].plot(x,y,color="yellow")
+# ax[1].set_xticks([45,34,21])
+# ax[1].set_xticklabels(["A","B","C"])
+# ax[1].tick_params(axis="x",colors="brown",top=True)
+# ax[1].tick_params(axis="y",colors="orange")
+# ax[1].set_title("second plot")
+# plt.tight_layout()
+# plt.show()
+
+# Question 47
+
+'''Create scientific-looking graph.
+Requirements:
+enable minor ticks
+add grid
+customize tick appearance
+Goal
+Professional plotting style.'''
+fig,ax=plt.subplots(1,2,figsize=(10,2))
+x=[34,89,23]
+y=[56,34,98]
+ax[0].plot(x,y,color="red")
+ax[0].set_xticks([32,51,24])
+ax[0].minorticks_on()
+ax[0].set_xticklabels(["A","B","C"])
+ax[0].tick_params(axis="x",colors="brown",direction="in",length=4,width=7)
+ax[0].tick_params(axis="y",colors="green",direction="in",length=9,width=5)
+ax[0].grid(which="minor")
+
+ax[1].plot(x,y,color="silver")
+ax[1].set_xticks([42,47,68])
+ax[1].minorticks_on()
 ax[1].set_xticklabels(["A","B","C"])
-ax[1].tick_params(axis="x",colors="brown",top=True)
-ax[1].tick_params(axis="y",colors="orange")
-ax[1].set_title("second plot")
-plt.tight_layout()
+ax[1].tick_params(axis="x",colors="brown",direction="in",length=9,width=2)
+ax[1].tick_params(axis="y",colors="green",direction="in",length=3,width=6)
+ax[1].grid(which="minor")
 plt.show()
