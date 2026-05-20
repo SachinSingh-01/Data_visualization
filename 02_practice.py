@@ -1303,20 +1303,23 @@ legends'''
 default aspect
 custom aspect
 Observe visual distortion.'''
-fig,ax=plt.subplots(1,2)
-ax[0].plot([4,5,7],[9,2,8])
-ax[0].set_title("Default plot")
-ax[0].set_xlabel("x-axis")
-ax[0].set_ylabel("y-axis")
+# fig,ax=plt.subplots(1,2)
+# ax[0].plot([4,5,7],[9,2,8])
+# ax[0].set_title("Default plot")
+# ax[0].set_xlabel("x-axis")
+# ax[0].set_ylabel("y-axis")
 
-ax[1].set_aspect("equal")
-ax[1].plot([4,5,7],[9,2,8])
-plt.show()
+# ax[1].set_aspect("equal")
+# ax[1].plot([4,5,7],[9,2,8])
+# plt.show()
+
 # Question 50
 '''Use:
 fig.add_axes()
 Create:
 main plot
 small inset plot'''
-# fig,ax=plt.subplots(1,2,figsize=(5,2))
-# fig.add_axes()
+fig=plt.figure()
+main_ax=fig.add_axes([0.1, 0.1, 0.8, 0.8])
+inset_ax=fig.add_axes([0.6, 0.6, 0.2, 0.2])
+plt.show()
